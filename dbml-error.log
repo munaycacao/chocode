@@ -1,0 +1,108 @@
+2023-03-05T20:04:13.613Z
+SyntaxError: You have a syntax error at "model.dbml" line 5 column 24. Expected " ", "[", PK, comment, newline, or unique but "\"" found.
+    at /opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/utils.js:55:13
+    at Array.forEach (<anonymous>)
+    at generate (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/utils.js:48:14)
+    at exportHandler (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/export.js:38:27)
+    at Object.dbml2sql (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/index.js:27:23)
+    at Object.<anonymous> (/opt/homebrew/lib/node_modules/@dbml/cli/bin/dbml2sql.js:4:19)
+    at Module._compile (node:internal/modules/cjs/loader:1239:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1293:10)
+    at Module.load (node:internal/modules/cjs/loader:1096:32)
+    at Module._load (node:internal/modules/cjs/loader:935:12)
+
+ROOT_ERROR:
+SyntaxError: Expected " ", "[", PK, comment, newline, or unique but "\"" found.
+    at peg$buildStructuredError (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/parse/dbmlParser.js:1163:12)
+    at Object.peg$parse [as parse] (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/parse/dbmlParser.js:8164:11)
+    at Function.parseDBMLToJSON (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/parse/Parser.js:54:37)
+    at Function.parse (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/parse/Parser.js:81:32)
+    at Object._export [as export] (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/export/index.js:15:37)
+    at /opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/export.js:38:69
+    at /opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/utils.js:52:23
+    at Array.forEach (<anonymous>)
+    at generate (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/utils.js:48:14)
+    at exportHandler (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/export.js:38:27)
+{"start":{"offset":215,"line":5,"column":24},"end":{"offset":216,"line":5,"column":25}}
+
+2023-03-05T20:04:52.021Z
+SyntaxError: You have a syntax error at "model.dbml" line 5 column 24. Expected " ", "[", PK, comment, newline, or unique but "\"" found.
+    at /opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/utils.js:55:13
+    at Array.forEach (<anonymous>)
+    at generate (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/utils.js:48:14)
+    at exportHandler (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/export.js:38:27)
+    at Object.dbml2sql (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/index.js:27:23)
+    at Object.<anonymous> (/opt/homebrew/lib/node_modules/@dbml/cli/bin/dbml2sql.js:4:19)
+    at Module._compile (node:internal/modules/cjs/loader:1239:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1293:10)
+    at Module.load (node:internal/modules/cjs/loader:1096:32)
+    at Module._load (node:internal/modules/cjs/loader:935:12)
+
+ROOT_ERROR:
+SyntaxError: Expected " ", "[", PK, comment, newline, or unique but "\"" found.
+    at peg$buildStructuredError (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/parse/dbmlParser.js:1163:12)
+    at Object.peg$parse [as parse] (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/parse/dbmlParser.js:8164:11)
+    at Function.parseDBMLToJSON (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/parse/Parser.js:54:37)
+    at Function.parse (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/parse/Parser.js:81:32)
+    at Object._export [as export] (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/export/index.js:15:37)
+    at /opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/export.js:38:69
+    at /opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/utils.js:52:23
+    at Array.forEach (<anonymous>)
+    at generate (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/utils.js:48:14)
+    at exportHandler (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/export.js:38:27)
+{"start":{"offset":211,"line":5,"column":24},"end":{"offset":212,"line":5,"column":25}}
+
+2023-03-05T20:05:17.294Z
+SyntaxError: You have a syntax error at "model.dbml" line 5 column 26. Expected " ", "[", PK, comment, newline, or unique but "\"" found.
+    at /opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/utils.js:55:13
+    at Array.forEach (<anonymous>)
+    at generate (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/utils.js:48:14)
+    at exportHandler (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/export.js:38:27)
+    at Object.dbml2sql (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/index.js:27:23)
+    at Object.<anonymous> (/opt/homebrew/lib/node_modules/@dbml/cli/bin/dbml2sql.js:4:19)
+    at Module._compile (node:internal/modules/cjs/loader:1239:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1293:10)
+    at Module.load (node:internal/modules/cjs/loader:1096:32)
+    at Module._load (node:internal/modules/cjs/loader:935:12)
+
+ROOT_ERROR:
+SyntaxError: Expected " ", "[", PK, comment, newline, or unique but "\"" found.
+    at peg$buildStructuredError (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/parse/dbmlParser.js:1163:12)
+    at Object.peg$parse [as parse] (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/parse/dbmlParser.js:8164:11)
+    at Function.parseDBMLToJSON (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/parse/Parser.js:54:37)
+    at Function.parse (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/parse/Parser.js:81:32)
+    at Object._export [as export] (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/export/index.js:15:37)
+    at /opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/export.js:38:69
+    at /opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/utils.js:52:23
+    at Array.forEach (<anonymous>)
+    at generate (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/utils.js:48:14)
+    at exportHandler (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/export.js:38:27)
+{"start":{"offset":223,"line":5,"column":26},"end":{"offset":224,"line":5,"column":27}}
+
+2023-03-05T20:07:33.413Z
+SyntaxError: You have a syntax error at "model.dbml" line 10 column 26. Expected " ", "[", PK, comment, newline, or unique but "\"" found.
+    at /opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/utils.js:55:13
+    at Array.forEach (<anonymous>)
+    at generate (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/utils.js:48:14)
+    at exportHandler (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/export.js:38:27)
+    at Object.dbml2sql (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/index.js:27:23)
+    at Object.<anonymous> (/opt/homebrew/lib/node_modules/@dbml/cli/bin/dbml2sql.js:4:19)
+    at Module._compile (node:internal/modules/cjs/loader:1239:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1293:10)
+    at Module.load (node:internal/modules/cjs/loader:1096:32)
+    at Module._load (node:internal/modules/cjs/loader:935:12)
+
+ROOT_ERROR:
+SyntaxError: Expected " ", "[", PK, comment, newline, or unique but "\"" found.
+    at peg$buildStructuredError (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/parse/dbmlParser.js:1163:12)
+    at Object.peg$parse [as parse] (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/parse/dbmlParser.js:8164:11)
+    at Function.parseDBMLToJSON (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/parse/Parser.js:54:37)
+    at Function.parse (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/parse/Parser.js:81:32)
+    at Object._export [as export] (/opt/homebrew/lib/node_modules/@dbml/cli/node_modules/@dbml/core/lib/export/index.js:15:37)
+    at /opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/export.js:38:69
+    at /opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/utils.js:52:23
+    at Array.forEach (<anonymous>)
+    at generate (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/utils.js:48:14)
+    at exportHandler (/opt/homebrew/lib/node_modules/@dbml/cli/lib/cli/export.js:38:27)
+{"start":{"offset":329,"line":10,"column":26},"end":{"offset":330,"line":10,"column":27}}
+

@@ -1,0 +1,1 @@
+GOOS=linux GOARCH=amd64 go build -o chocode_lambda main.go && zip chocode_lambda.zip chocode_lambda && rm chocode_lambda
