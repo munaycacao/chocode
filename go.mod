@@ -1,4 +1,4 @@
-module github.com/munaycacao/chocode.git
+module github.com/munaycacao/chocode
 
 go 1.19
 

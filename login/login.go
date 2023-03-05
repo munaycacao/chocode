@@ -18,7 +18,6 @@ type UserLoginInput struct {
 	Password string `json:"password"`
 }
 
-
 func LoginHandler(c *gin.Context) {
 	var userInput UserLoginInput
 	if err := c.ShouldBindJSON(&userInput); err != nil {
