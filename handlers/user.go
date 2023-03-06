@@ -35,5 +35,13 @@ func (b *BaseHandler) CreateUser(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusCreated, gin.H{"status": "user created"})
+	dbUser, err := b.Repo.Queries.GetUserByName(b.Ctx, user.Username)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	dbUser.Password = ""
+
+	c.JSON(http.StatusCreated, dbUser)
 }

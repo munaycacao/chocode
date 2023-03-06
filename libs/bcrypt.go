@@ -20,7 +20,7 @@ func CheckPasswordHash(password, hash string) bool {
 
 
 //GenerateToken -> generates token
-func GenerateToken(userid uint) string {
+func GenerateToken(userid int32) string {
 	claims := jwt.MapClaims{
 		"exp":    time.Now().Add(time.Hour * 3).Unix(),
 		"iat":    time.Now().Unix(),

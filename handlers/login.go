@@ -1,10 +1,10 @@
 package handlers
 
 import (
-	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"github.com/munaycacao/chocode/libs"
 )
 
 type UserLoginInput struct {
@@ -25,7 +25,12 @@ func (h *BaseHandler) DoLogIn(c *gin.Context) {
 		return
 	}
 
-	fmt.Println(dbUser)
+	if isTrue := libs.CheckPasswordHash(userInput.Password, dbUser.Password); isTrue {
+		token := libs.GenerateToken(dbUser.ID)
+		c.JSON(http.StatusOK, gin.H{"msg": "You are logged in", "token": token})
+		return
+	}
+	c.JSON(http.StatusInternalServerError, gin.H{"msg": "Password not matched"})
+	return
 
-	c.JSON(http.StatusOK, gin.H{"status": "you are logged in"})
 }
