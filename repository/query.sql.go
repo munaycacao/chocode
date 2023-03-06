@@ -7,10 +7,26 @@ package repository
 
 import (
 	"context"
+	"database/sql"
 )
 
+const createUser = `-- name: CreateUser :execresult
+INSERT INTO users (username, password, role)
+VALUES (?, ?, ?)
+`
+
+type CreateUserParams struct {
+	Username string `json:"username"`
+	Password string `json:"password"`
+	Role     string `json:"role"`
+}
+
+func (q *Queries) CreateUser(ctx context.Context, arg CreateUserParams) (sql.Result, error) {
+	return q.db.ExecContext(ctx, createUser, arg.Username, arg.Password, arg.Role)
+}
+
 const getUser = `-- name: GetUser :one
-SELECT id, username, role, created_at, updated_at FROM users
+SELECT id, username, password, role, created_at, updated_at FROM users
 WHERE id = ? LIMIT 1
 `
 
@@ -20,6 +36,26 @@ func (q *Queries) GetUser(ctx context.Context, id int32) (User, error) {
 	err := row.Scan(
 		&i.ID,
 		&i.Username,
+		&i.Password,
+		&i.Role,
+		&i.CreatedAt,
+		&i.UpdatedAt,
+	)
+	return i, err
+}
+
+const getUserByName = `-- name: GetUserByName :one
+SELECT id, username, password, role, created_at, updated_at FROM users
+WHERE username = ? LIMIT 1
+`
+
+func (q *Queries) GetUserByName(ctx context.Context, username string) (User, error) {
+	row := q.db.QueryRowContext(ctx, getUserByName, username)
+	var i User
+	err := row.Scan(
+		&i.ID,
+		&i.Username,
+		&i.Password,
 		&i.Role,
 		&i.CreatedAt,
 		&i.UpdatedAt,

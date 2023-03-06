@@ -12,19 +12,20 @@ requirements:
 build:
     FROM +requirements
     COPY *.go ./
-    COPY ./pkg ./pkg
-    COPY ./core ./core
+    COPY ./libs ./libs
+    COPY ./handlers ./handlers
+    COPY ./repository ./repository
     
-    RUN go install github.com/swaggo/swag/cmd/swag@latest
-    RUN swag init
+    # RUN go install github.com/swaggo/swag/cmd/swag@latest
+    # RUN swag init
 
     RUN go build -o main .
-    RUN mv ./main ./run_regos
     # Removing source code after build
-    RUN rm -Rdf ./pkg ./core ./main.go ./main_test.go ./go.mod ./go.sum
+    RUN rm -Rdf ./libs ./handlers ./repository # Remove folders
+    RUN rm -Rdf ./main.go  ./go.mod ./go.sum # Remove source files
 
     EXPOSE 8080
 
-    CMD [ "/app/run_regos" ]
+    CMD [ "/app/main" ]
 
     SAVE IMAGE  chocode:latest

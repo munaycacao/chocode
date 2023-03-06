@@ -1,6 +1,7 @@
 Table users {
   id int [pk, not null, increment]
   username varchar(20) [unique, not null]
+  password varchar(200) [not null]
   role varchar(20) [not null]
   created_at "DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP"
   updated_at "DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"

@@ -1,0 +1,31 @@
+version: "3.9"
+services:
+  api:
+    image: "chocode:latest"
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_HOST=${DB_HOST} 
+      - DB_DATABASE=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASSWORD}
+      - DB_PORT=${DB_PORT}
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: "mysql:8"
+    ports: 
+      - "3306:3306"
+    command: --init-file /init.sql
+    volumes:
+      - ./repository/model.sql:/init.sql
+    environment:
+      - MYSQL_ROOT_HOST=${DB_HOST} 
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+      - MYSQL_ROOT_HOST=%
+    healthcheck:
+      test: ["CMD", 'mysqladmin', 'ping', '-h', 'localhost', '-u', 'root', '-p$$MYSQL_ROOT_PASSWORD' ]
+      interval: 20s
+      retries: 5
